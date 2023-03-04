@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+  <title>LocalLibrary Homepage</title>
+{% endblock %}
+
+
+{% block content %}
+  <h1 style="margin-top:20px;">Local Library Home</h1>
+  <p>Welcome to LocalLibrary, a website developed by <em>Fahreddin Ozcan</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+    <li><strong>Genres:</strong> {{num_genres}}</li>
+    <li><strong>Fiction genres:</strong> {{num_genres_fiction}}</li>
+    <li><strong>Harry Potter books:</strong> {{num_books_harrypotter}}</li>
+  </ul>
+  <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+{% endblock %}
